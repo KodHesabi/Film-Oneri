@@ -10,22 +10,33 @@ using System.Windows.Forms;
 
 namespace Film_Oneri
 {
-    public partial class Form1 : Form
+    public partial class Form3 : Form
     {
-        public Form1()
+       
+
+        public Form3()
         {
             InitializeComponent();
+
         }
 
-        private void textBox4_TextChanged(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e)
         {
+            
+
+            Film_Oneri.Kullanıcı_AnaSayfa göster = new Film_Oneri.Kullanıcı_AnaSayfa();
+            göster.Show();
+            
+
+            
+
+
+
+
+
+
+
 
         }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
     }
 }

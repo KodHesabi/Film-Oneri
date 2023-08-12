@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Film_Oneri
 {
-    public partial class Form2 : Form
+    public partial class Kullanıcı_AnaSayfa : Form
     {
-        public Form2()
+        public Kullanıcı_AnaSayfa()
         {
             InitializeComponent();
         }

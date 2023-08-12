@@ -46,12 +46,13 @@ namespace Film_Oneri
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(442, 501);
+            this.button1.Location = new System.Drawing.Point(445, 487);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(84, 36);
             this.button1.TabIndex = 0;
-            this.button1.Text = "Kaydet";
+            this.button1.Text = "Ekle";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label1
             // 
@@ -171,7 +172,8 @@ namespace Film_Oneri
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Yetkili AnaSayfa";
             this.ResumeLayout(false);
             this.PerformLayout();
 
