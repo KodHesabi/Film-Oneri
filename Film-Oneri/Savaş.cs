@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace Film_Oneri
 {
-    class Savaşcı
+    class Savaş
     {
         public int Id { get; set; }
 
         public string FilmAdi { get; set; }
 
-        public double Filmİmdb { get; set; }
+        public double FilmImbd { get; set; }
 
         public int FilmYili { get; set; }
 

@@ -46,15 +46,13 @@ namespace Film_Oneri
             // 
             this.Oner_Combobox.FormattingEnabled = true;
             this.Oner_Combobox.Items.AddRange(new object[] {
-            "Korku",
             "Gerilim",
-            "Macera",
+            "Korku",
+            "Bilim Kurgu",
             "Fantastik",
-            "Tarihi",
-            "Gizem",
-            "Savaş",
-            "Romantik",
-            "Komedi"});
+            "Komedi",
+            "Macera",
+            "Savaş"});
             this.Oner_Combobox.Location = new System.Drawing.Point(223, 211);
             this.Oner_Combobox.Name = "Oner_Combobox";
             this.Oner_Combobox.Size = new System.Drawing.Size(121, 24);

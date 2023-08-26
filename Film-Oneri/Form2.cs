@@ -33,8 +33,58 @@ namespace Film_Oneri
                 textBox2.Text = k.FilmImbd.ToString();
 
             }
-            
-           
+
+            else if (Oner_Combobox.SelectedIndex == 2)
+            {
+                var k = filmlerContext1.BilimKurgu.Find(sayi);
+
+                GetirFilmAdi.Text = k.FilmAdi;
+                textBox3.Text = k.FilmYili.ToString();
+                textBox2.Text = k.FilmImbd.ToString();
+
+            }
+
+            else if (Oner_Combobox.SelectedIndex == 3)
+            {
+                var k = filmlerContext1.Fantastik.Find(sayi);
+
+                GetirFilmAdi.Text = k.FilmAdi;
+                textBox3.Text = k.FilmYili.ToString();
+                textBox2.Text = k.FilmImbd.ToString();
+
+            }
+
+            else if (Oner_Combobox.SelectedIndex == 4)
+            {
+                var k = filmlerContext1.Komedi.Find(sayi);
+
+                GetirFilmAdi.Text = k.FilmAdi;
+                textBox3.Text = k.FilmYili.ToString();
+                textBox2.Text = k.FilmImbd.ToString();
+
+            }
+
+            else if (Oner_Combobox.SelectedIndex == 5)
+            {
+                var k = filmlerContext1.Macera.Find(sayi);
+
+                GetirFilmAdi.Text = k.FilmAdi;
+                textBox3.Text = k.FilmYili.ToString();
+                textBox2.Text = k.FilmImbd.ToString();
+
+            }
+
+            else if (Oner_Combobox.SelectedIndex == 6)
+            {
+                var k = filmlerContext1.Savaş.Find(sayi);
+
+                GetirFilmAdi.Text = k.FilmAdi;
+                textBox3.Text = k.FilmYili.ToString();
+                textBox2.Text = k.FilmImbd.ToString();
+
+            }
+
+
         }
     }
 }

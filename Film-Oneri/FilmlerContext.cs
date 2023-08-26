@@ -13,7 +13,7 @@ namespace Film_Oneri
 
         public DbSet<Korku> Korku { get; set; }
 
-        public DbSet<Savaşcı> Savaşcı { get; set; }
+        public DbSet<Savaş> Savaş { get; set; }
 
         public DbSet<Fantastik> Fantastik { get; set; }
 
