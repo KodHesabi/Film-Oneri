@@ -29,23 +29,23 @@ namespace Film_Oneri
         /// </summary>
         private void InitializeComponent()
         {
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.Oner_Combobox = new System.Windows.Forms.ComboBox();
             this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.GetirFilmAdi = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // comboBox1
+            // Oner_Combobox
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.Oner_Combobox.FormattingEnabled = true;
+            this.Oner_Combobox.Items.AddRange(new object[] {
             "Korku",
             "Gerilim",
             "Macera",
@@ -55,10 +55,10 @@ namespace Film_Oneri
             "Savaş",
             "Romantik",
             "Komedi"});
-            this.comboBox1.Location = new System.Drawing.Point(223, 211);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 24);
-            this.comboBox1.TabIndex = 0;
+            this.Oner_Combobox.Location = new System.Drawing.Point(223, 211);
+            this.Oner_Combobox.Name = "Oner_Combobox";
+            this.Oner_Combobox.Size = new System.Drawing.Size(121, 24);
+            this.Oner_Combobox.TabIndex = 0;
             // 
             // button1
             // 
@@ -68,6 +68,7 @@ namespace Film_Oneri
             this.button1.TabIndex = 3;
             this.button1.Text = "Öner";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label1
             // 
@@ -91,7 +92,7 @@ namespace Film_Oneri
             // 
             this.panel1.Controls.Add(this.textBox3);
             this.panel1.Controls.Add(this.textBox2);
-            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.GetirFilmAdi);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
@@ -100,13 +101,29 @@ namespace Film_Oneri
             this.panel1.Size = new System.Drawing.Size(391, 358);
             this.panel1.TabIndex = 7;
             // 
-            // textBox1
+            // textBox3
             // 
-            this.textBox1.Location = new System.Drawing.Point(115, 71);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(200, 34);
-            this.textBox1.TabIndex = 8;
+            this.textBox3.Location = new System.Drawing.Point(115, 220);
+            this.textBox3.Multiline = true;
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(200, 34);
+            this.textBox3.TabIndex = 10;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(119, 149);
+            this.textBox2.Multiline = true;
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(200, 34);
+            this.textBox2.TabIndex = 9;
+            // 
+            // GetirFilmAdi
+            // 
+            this.GetirFilmAdi.Location = new System.Drawing.Point(115, 71);
+            this.GetirFilmAdi.Multiline = true;
+            this.GetirFilmAdi.Name = "GetirFilmAdi";
+            this.GetirFilmAdi.Size = new System.Drawing.Size(200, 34);
+            this.GetirFilmAdi.TabIndex = 8;
             // 
             // label4
             // 
@@ -126,22 +143,6 @@ namespace Film_Oneri
             this.label3.TabIndex = 7;
             this.label3.Text = "IMDB PUANI :";
             // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(119, 149);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(200, 34);
-            this.textBox2.TabIndex = 9;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(115, 220);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(200, 34);
-            this.textBox3.TabIndex = 10;
-            // 
             // Kullanıcı_AnaSayfa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -150,7 +151,7 @@ namespace Film_Oneri
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.Oner_Combobox);
             this.Name = "Kullanıcı_AnaSayfa";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Kullanıcı_AnaSayfa";
@@ -163,12 +164,12 @@ namespace Film_Oneri
 
         #endregion
 
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox Oner_Combobox;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox GetirFilmAdi;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox textBox3;

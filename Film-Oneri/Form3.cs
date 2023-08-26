@@ -10,11 +10,11 @@ using System.Windows.Forms;
 
 namespace Film_Oneri
 {
-    public partial class Form3 : Form
+    public partial class Giriş_ekranı : Form
     {
        
 
-        public Form3()
+        public Giriş_ekranı()
         {
             InitializeComponent();
 
@@ -28,15 +28,16 @@ namespace Film_Oneri
             göster.Show();
             
 
+
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Film_Oneri.Yetkili_AnaSayfa yetkili = new Film_Oneri.Yetkili_AnaSayfa();
+            yetkili.Show();
             
-
-
-
-
-
-
-
-
+            
         }
     }
 }

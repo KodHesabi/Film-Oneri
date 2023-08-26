@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Film_Oneri
 {
-    public partial class Form1 : Form
+    public partial class Yetkili_AnaSayfa : Form
     {
-        public Form1()
+        public Yetkili_AnaSayfa()
         {
             InitializeComponent();
         }
@@ -22,9 +22,31 @@ namespace Film_Oneri
 
         }
 
+        FilmlerContext filmlerContext = new FilmlerContext();
         private void button1_Click(object sender, EventArgs e)
         {
+            if (comboBox1.SelectedIndex==0)
+            {
+                filmlerContext.Gerilim.Add(
+                    new Gerilim
+                    {
+                        FilmAdi = textBox1.Text,
+                        FilmImbd = Convert.ToDouble(textBox2.Text),
+                        FilmYili = Convert.ToInt32(textBox3.Text),
 
+                    }
+
+                    ) ;
+
+                var k = filmlerContext.SaveChanges();
+
+                if(k!=0)
+                {
+                    MessageBox.Show("Başarıyla Kaydedildi","Uyarı");
+                }
+
+
+            }
         }
 
     }
