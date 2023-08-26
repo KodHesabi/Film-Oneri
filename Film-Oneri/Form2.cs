@@ -15,8 +15,14 @@ namespace Film_Oneri
         {
 
             Random a = new Random();
-            int sayi = a.Next(0, 9);
-            
+            int sayi = a.Next(0, 10);
+            if(Oner_Combobox.SelectedIndex ==0)
+            {
+                var k = filmlerContext1.Korku.Find(sayi);
+                GetirFilmAdi.Text = k.FilmAdi;
+                textBox3.Text = k.FilmYili.ToString();
+                textBox2.Text = k.FilmImbd.ToString();
+            }
 
             if (Oner_Combobox.SelectedIndex == 1)
             {

@@ -25,10 +25,10 @@ namespace Film_Oneri
         FilmlerContext filmlerContext = new FilmlerContext();
         private void button1_Click(object sender, EventArgs e)
         {
-            if (comboBox1.SelectedIndex==0)
+            if (comboBox1.SelectedIndex==1)
             {
-                filmlerContext.Gerilim.Add(
-                    new Gerilim
+                filmlerContext.Korku.Add(
+                    new Korku
                     {
                         FilmAdi = textBox1.Text,
                         FilmImbd = Convert.ToDouble(textBox2.Text),
@@ -43,6 +43,29 @@ namespace Film_Oneri
                 if(k!=0)
                 {
                     MessageBox.Show("Başarıyla Kaydedildi","Uyarı");
+                }
+
+
+            }
+
+            if (comboBox1.SelectedIndex == 0)
+            {
+                filmlerContext.Gerilim.Add(
+                    new Gerilim
+                    {
+                        FilmAdi = textBox1.Text,
+                        FilmImbd = Convert.ToDouble(textBox2.Text),
+                        FilmYili = Convert.ToInt32(textBox3.Text),
+
+                    }
+
+                    );
+
+                var k = filmlerContext.SaveChanges();
+
+                if (k != 0)
+                {
+                    MessageBox.Show("Başarıyla Kaydedildi", "Uyarı");
                 }
 
 
